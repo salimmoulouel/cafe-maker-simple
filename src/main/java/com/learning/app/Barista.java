@@ -1,5 +1,6 @@
 package com.learning.app;
 
+@Author(name = "Salim", date = "2026-03-12")
 public class Barista {
     private String name;
     private CoffeeMachine coffeeMachine;

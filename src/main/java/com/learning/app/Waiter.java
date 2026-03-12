@@ -1,5 +1,6 @@
 package com.learning.app;
 
+@Author(name = "Salim", date = "2026-03-12")
 public class Waiter {
     private Barista barista;
     private Cashier cashier;
