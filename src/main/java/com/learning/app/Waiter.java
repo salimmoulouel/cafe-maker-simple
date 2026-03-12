@@ -1,5 +1,8 @@
 package com.learning.app;
 
+import org.springframework.stereotype.Component;
+
+@Component
 @Author(name = "Salim", date = "2026-03-12")
 public class Waiter {
     private Barista barista;

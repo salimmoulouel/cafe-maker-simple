@@ -1,5 +1,8 @@
 package com.learning.app;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class AccountingService {
     private double totalRevenue = 0;
 

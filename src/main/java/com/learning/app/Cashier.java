@@ -1,5 +1,8 @@
 package com.learning.app;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Cashier {
     private AccountingService accountingService;
 

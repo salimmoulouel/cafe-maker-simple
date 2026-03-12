@@ -1,14 +1,17 @@
 package com.learning.app;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 @Author(name = "Salim", date = "2026-03-12")
 public class Barista {
     private String name;
     private CoffeeMachine coffeeMachine;
-    /**
-     * @deprecated Use Barista(Profile profile, CoffeeMachine machine) instead.
-    */
-    @Deprecated(since = "2.0", forRemoval = true)
-    public Barista(String name, CoffeeMachine machine) {
+
+    @Autowired
+    public Barista(@Value("${cafe.barista.name}") String name, CoffeeMachine machine) {
         this.name = name;
         this.coffeeMachine = machine;
     }
@@ -18,6 +21,7 @@ public class Barista {
         coffeeMachine.brew(type);
         return "A hot " + type + " is ready!";
     }
+
     @Override
     public String toString() {
         return "Barista: " + this.name;
